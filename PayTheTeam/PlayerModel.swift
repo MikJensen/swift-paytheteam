@@ -14,8 +14,27 @@ class PlayerModel: NSObject
     let loginObj = KeychainWrapper.objectForKey("IsLoggedIn") as! Login
     let ref = Firebase(url: "https://paytheteam.firebaseio.com/Players/")
     
-    func getPLayer(){
-        
+    func getPlayer(ch:(returnValue: Player)->Void){
+        ref.observeEventType(.ChildAdded, withBlock: {
+            snapshot in
+            if snapshot.key == self.loginObj.getPlayer(){
+                let id = snapshot.key
+                let name = snapshot.value.objectForKey("name") as! String
+                let mail = snapshot.value.objectForKey("email") as! String
+                let number = snapshot.value.objectForKey("number") as! String
+                let status = snapshot.value.objectForKey("status") as! Int
+                
+                self.getOwsOfPlayer(id)
+                {
+                    returnValueOw in
+                    
+                    ch(returnValue: Player(id: id, name: name, number: number, mail: mail, status: status, ows: returnValueOw))
+                }
+            }
+        }, withCancelBlock:{
+            error in
+            print(error.description)
+        })
     }
     func getAllPlayers(ch:(returnValue: Array<Player>)->Void)
     {

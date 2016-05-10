@@ -40,7 +40,10 @@ class OverviewVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         refreshControl.addTarget(self, action: #selector(OverviewVC.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         overViewTV.addSubview(refreshControl)
         
-        //getPlayerOw(loginObj.)
+        PlayerModel().getPlayer(){
+            returnValue in
+            self.labelMidRight.text = "\(self.getPlayerOw(returnValue.getOws())) kr."
+        }
         // Do any additional setup after loading the view.
     }
 
