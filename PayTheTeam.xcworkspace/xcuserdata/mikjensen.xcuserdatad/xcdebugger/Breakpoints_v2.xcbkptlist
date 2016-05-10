@@ -111,40 +111,8 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "17"
             endingLineNumber = "17"
-            landmarkName = "getAllPlayers(_:)"
+            landmarkName = "getPlayer(_:)"
             landmarkType = "5">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PayTheTeam.PlayerModel.GetAllPlayers ((returnValue : Swift.Array&lt;PayTheTeam.Player&gt;) -&gt; ()) -&gt; ()"
-                  moduleName = "PayTheTeam"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mikjensen/Documents/XCode_projects/PayTheTeam/PayTheTeam/PlayerModel.swift"
-                  timestampString = "483740389.298944"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "96">
-               </Location>
-               <Location
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PayTheTeam.PlayerModel.(GetAllPlayers ((returnValue : Swift.Array&lt;PayTheTeam.Player&gt;) -&gt; ()) -&gt; ()).(closure #1)"
-                  moduleName = "PayTheTeam"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/mikjensen/Documents/XCode_projects/PayTheTeam/PayTheTeam/PlayerModel.swift"
-                  timestampString = "483740389.299137"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "17"
-                  endingLineNumber = "17"
-                  offsetFromSymbolStart = "28">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -170,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PayTheTeam/PlayerModel.swift"
-            timestampString = "483896785.31992"
+            timestampString = "484591774.619943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "createPlayer(_:playerName:playerNumber:playerPass:playerStatus:ch:)"
             landmarkType = "5">
          </BreakpointContent>
@@ -186,13 +154,13 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PayTheTeam/PlayerModel.swift"
-            timestampString = "483896785.31992"
+            timestampString = "484591774.619943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "112"
-            endingLineNumber = "112"
-            landmarkName = "deletePlayer(_:ch:)"
-            landmarkType = "5">
+            startingLineNumber = "131"
+            endingLineNumber = "131"
+            landmarkName = "PlayerModel"
+            landmarkType = "3">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -218,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PayTheTeam/OverviewVC.swift"
-            timestampString = "483897278.440467"
+            timestampString = "484591774.619943"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "83"
+            endingLineNumber = "83"
             landmarkName = "getPlayerOw(_:)"
             landmarkType = "5">
          </BreakpointContent>
