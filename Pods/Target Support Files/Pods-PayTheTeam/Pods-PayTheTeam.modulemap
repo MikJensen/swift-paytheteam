@@ -1,0 +1,6 @@
+framework module Pods_PayTheTeam {
+  umbrella header "Pods-PayTheTeam-umbrella.h"
+
+  export *
+  module * { export * }
+}
