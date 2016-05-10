@@ -19,6 +19,7 @@ class OverviewVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     var playerArr = [Player]()
     var playerObject:Player!
+    var totalOws = 0
     
     let loginObj = KeychainWrapper.objectForKey("IsLoggedIn") as! Login
 
@@ -38,6 +39,8 @@ class OverviewVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         refreshControl.attributedTitle = NSAttributedString(string: "Opdater oversigt")
         refreshControl.addTarget(self, action: #selector(OverviewVC.refresh(_:)), forControlEvents: UIControlEvents.ValueChanged)
         overViewTV.addSubview(refreshControl)
+        
+        getPlayerOw(loginObj.)
         // Do any additional setup after loading the view.
     }
 
@@ -60,6 +63,7 @@ class OverviewVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     func loadPlayers()
     {
+        totalOws = 0
         playerArr.removeAll()
         PlayerModel().getAllPlayers(){
             returnValue in
@@ -67,8 +71,16 @@ class OverviewVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 self.playerArr = returnValue
                 self.playerArr.sortInPlace({$0.name < $1.name})
                 self.overViewTV.reloadData()
+                self.loadTotalOws()
             }
         }
+    }
+    func loadTotalOws(){
+        var total = 0
+        for player in playerArr{
+            total += self.getPlayerOw(player.getOws())
+        }
+        labelTopRight.text = "\(total) kr."
     }
     func getPlayerOw(ows: Array<Ows>) -> Int
     {
@@ -119,7 +131,7 @@ class OverviewVC: UIViewController, UITableViewDataSource, UITableViewDelegate
         {
             cell.accessoryType = UITableViewCellAccessoryType.DisclosureIndicator
         }
-        cell.fineText.text = "\(playerArr[indexPath.row].getName()) skylder"
+        cell.fineText.text = "\(playerArr[indexPath.row].getName())"
         cell.priceLbl.text = "\(getPlayerOw(playerArr[indexPath.row].getOws())) kr."
         
         return cell

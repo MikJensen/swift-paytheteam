@@ -14,6 +14,9 @@ class PlayerModel: NSObject
     let loginObj = KeychainWrapper.objectForKey("IsLoggedIn") as! Login
     let ref = Firebase(url: "https://paytheteam.firebaseio.com/Players/")
     
+    func getPLayer(){
+        
+    }
     func getAllPlayers(ch:(returnValue: Array<Player>)->Void)
     {
         var playerArr = [Player]()
